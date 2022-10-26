@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>
+            Projeto C78
+        </title>
+            </head>
+    <script src="main.js"></script>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                Meu Álbum de Família
+            </h1>
+
+            <img src="https://storage.googleapis.com/pod_public/1300/93631.jpg" style="width: 30%;" id="family_member_image">
+           
+          <h4 id="family_member_name"></h4>
+            
+          <button onclick="update();" style="background-color:black;width:15%;color:white;">Próximo</button>
+        </center>
+        <script>
+         var images = [ "https://storage.googleapis.com/pod_public/1300/93631.jpg","https://365psd.com/images/istock/previews/8404/84045101-woman-and-child-icon.jpg",
+          "https://www.vhv.rs/dpng/d/279-2798126_png-of-girl-and-boy-head-boy-side.png","https://i.pinimg.com/736x/1d/2c/1f/1d2c1fb49931ac50765d2eeb75785817.jpg",
+          "https://www.vhv.rs/dpng/d/279-2798126_png-of-girl-and-boy-head-boy-side.png"];
+           
+           var names = ["","Mãe ", "Eu", "Pai", "irmão"];
+                     
+           var i = 0;
+           function update()
+           {
+                i++;
+                
+                if(i >4 )
+                {
+                   i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName; 
+           }
+        </script>
+    </body>
+</html>
